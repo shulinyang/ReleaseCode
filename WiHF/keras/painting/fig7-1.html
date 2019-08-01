@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body style="height: 100%; margin: 0">
+    <div id="container" style="height: 100%"></div>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/simplex.js"
+    ></script>
+    <script type="text/javascript">
+      var dom = document.getElementById("container");
+      var myChart = echarts.init(dom);
+      var app = {};
+      var seriesLabel = {
+        normal: {
+          show: true,
+          // textBorderColor: "#fff",
+          textBorderWidth: 2,
+          fontSize: 25,
+          //   fontWeight: "bold",
+          position: "top",
+          formatter: "{c}%"
+        }
+      };
+      option = null;
+      option = {
+        legend: {
+          // orient: "vertical",
+          data:["Gesture", "User"],
+          top: "4%",
+          // right: "40%",
+          textStyle: {
+            fontSize: 30
+          }
+        },
+        tooltip: {},
+        grid: {
+          right: "20%",
+          left:"20%",
+          top:"10%",
+          bottom:"20%"
+        },
+        xAxis: {
+          type: "category",
+          name: "Target Index",
+          nameLocation:"center",
+          nameGap:35,
+          nameTextStyle: {
+            fontSize: 30,
+            // fontWeight: "bold"
+          },
+          axisLabel: {
+            // formatter: "{value}%",
+            fontSize: 30
+          },
+          data:[1,2,3,4,5,6]
+          
+        },
+        yAxis: {
+          type: "value",
+          name: "Accuracy",
+          interval :1,
+          scale: true,
+          nameTextStyle: {
+            fontSize: 30,
+            // fontWeight: "bold"
+          },
+          axisLabel: {
+            formatter: "{value}%",
+            fontSize: 30
+          },
+        },
+        // Declare several bar series, each will be mapped
+        // to a column of dataset.source by default.
+        series: [
+          { type: "bar",
+          name:'Gesture',
+            label: seriesLabel,
+            data:[98.05,97.06,98.61,96.10,98.17,97.94],
+          }, 
+          { type: "bar",label: seriesLabel,
+          name:'User',
+          data:[96.82,96.00,98.02 ,97.84 ,95.35 ,96.37], }]
+      };
+      if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+      }
+    </script>
+  </body>
+</html>

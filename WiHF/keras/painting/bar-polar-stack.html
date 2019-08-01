@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body style="height: 100%; margin: 0">
+    <div id="container" style="height: 100%"></div>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/simplex.js"
+    ></script>
+    <script type="text/javascript">
+      var dom = document.getElementById("container");
+      var myChart = echarts.init(dom);
+      var app = {};
+      option = null;
+      app.title = "极坐标系下的堆叠柱状图";
+
+      option = {
+        angleAxis: {},
+        radiusAxis: {
+          type: "category",
+          data: ["Widar3", "Tally_s", "Tally"],
+          z: 30,
+          axisLabel: {
+            fontSize: 20,
+            color: "#000",
+            fontWeight: "bold"
+          }
+        },
+        angleAxis: {
+          type: "value",
+          z: 20,
+          axisLabel: {
+            formatter: "{value}s",
+            fontSize: 20,
+            fontWeight: "bold"
+          }
+        },
+        polar: {},
+        series: [
+          {
+            type: "bar",
+            data: [0.1859
+, 0.2751
+, 0.5495
+],
+            coordinateSystem: "polar",
+            name: "Loading Data",
+            stack: "a"
+          },
+          {
+            type: "bar",
+            data: [0.162
+, 0.9918
+, 1.557
+],
+            coordinateSystem: "polar",
+            name: "Signal Processing",
+            stack: "a"
+          },
+          {
+            type: "bar",
+            data: [5, 0.1944
+, 0.3785
+],
+            coordinateSystem: "polar",
+            name: "Feature Extraction",
+            stack: "a"
+          },
+          {
+            type: "bar",
+            data: [0.0011
+, 0.0013
+, 0.0027
+],
+            coordinateSystem: "polar",
+            name: "Recognition/Identification",
+            stack: "a"
+          },
+          {
+            type: "bar",
+            data: [0, 0.2587
+,1.1811
+],
+            coordinateSystem: "polar",
+            name: "Extra Time",
+            stack: "a"
+          }
+        ],
+        legend: {
+          data: [
+            "Loading Data",
+            "Signal Processing",
+            "Feature Extraction",
+            "Recognition/Identification",
+            "Extra Time"
+          ],
+          orient: "vertical",
+          top: "8%",
+          right: "11%",
+          textStyle: {
+            fontSize: 20
+          }
+        }
+      };
+      if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+      }
+    </script>
+  </body>
+</html>

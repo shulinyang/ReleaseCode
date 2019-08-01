@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = {
+    // title: {
+    //     text: '折线图堆叠'
+    // },
+    // tooltip: {
+    //     trigger: 'axis'
+    // },
+    legend: {
+        orient: "vertical",
+        data:['User-LOC','User-ORI','User-IND','Gesture-LOC','Gesture-ORI','Gesture-IND'],
+        textStyle: {
+              fontSize: 30
+            },
+        top: "20%",
+        right: "10%",
+    },
+    grid: {
+          right: "25%",
+          left:"20%",
+          top:"10%",
+          bottom:"20%"
+    },
+    // toolbox: {
+    //     feature: {
+    //         saveAsImage: {}
+    //     }
+    // },
+    xAxis: {
+        type: 'category',
+        // boundaryGap: false,
+        data: ['-1','-0.5','0.0','0.5','1'],
+        name: "Merging Factor",
+        // nameLocation:"center",
+        // nameGap:"35",
+        nameTextStyle: {
+            fontSize: 30,
+            // fontWeight: "bold"
+        },
+        axisLabel: {
+            // formatter: "{value}%",
+            fontSize: 30
+          }
+    },
+    yAxis: {
+        type: "value",
+        name: "Accuracy",
+        scale: true,
+        min:60,
+        interval :10,
+        nameTextStyle: {
+        fontSize: 30,
+        // fontWeight: "bold"
+        },
+        axisLabel: {
+        formatter: "{value}%",
+        fontSize: 30
+        }
+    },
+    series: [
+        {
+            name:'User-LOC',
+            type:'line',
+            symbolSize:"15",
+            // stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'top',
+                    fontSize: 25,
+                    formatter: "{c}%",
+                    distance: 1,
+                    textBorderColor: "#fff",
+                }
+            },
+            itemStyle:{
+                color:"rgb(194,53,49)"
+            },
+            lineStyle:{
+               type:"dotted",
+               width:"5",
+               color:"rgb(194,53,49)"
+            },
+            data:[71.40, 71.77, 75.31, 72.13, 73.12 
+]
+        },
+        {
+            name:'User-ORI',
+            type:'line',
+            // stack: '总量',
+            symbol:"emptyRect",
+            symbolSize:"15",
+            label: {
+                normal: {
+                    show: true,
+                    position: 'top',
+                    fontSize: 25,
+                    formatter: "{c}%",
+                    distance: 1,
+                    textBorderColor: "#fff",
+                    color:"rgb(194,53,49)"
+                }
+            },
+            itemStyle:{
+                color:"rgb(194,53,49)"
+            },
+            lineStyle:{
+               type:"dashed",
+               width:"5",
+               color:"rgb(194,53,49)" 
+            },
+            data:[66.36, 67.22, 69.52, 67.59,67.94]
+        },
+        {
+            name:'User-IND',
+            type:'line',
+            // stack: '总量',
+            symbol:"emptyTriangle",
+            symbolSize:"15",
+            label: {
+                normal: {
+                    show: true,
+                    position: 'bottom',
+                    fontSize: 25,
+                    formatter: "{c}%",
+                    distance: 8,
+                    textBorderColor: "#fff",
+                    color:"rgb(194,53,49)"
+                }
+            },
+            itemStyle:{
+                color:"rgb(194,53,49)"
+            },
+            lineStyle:{
+               type:"solid",
+               width:"5",
+               color:"rgb(194,53,49)"
+            },
+            data:[94.50, 95.78, 97.11, 95.50, 93.56]
+        },
+        {
+            name:'Gesture-LOC',
+            type:'line',
+            // stack: '总量',
+            symbolSize:"15",
+            label: {
+                normal: {
+                    show: true,
+                    position: 'bottom',
+                    fontSize: 25,
+                    formatter: "{c}%",
+                    distance: 8,
+                    textBorderColor: "#fff",
+                    color:"rgb(51,75,92)"
+                }
+            },
+            itemStyle:{
+                color:"rgb(51,75,92)"
+            },
+            lineStyle:{
+               type:"dotted",
+               width:"5",
+               color:"rgb(51,75,92)"
+            },
+            data:[87.84, 89.51, 92.07, 88.44, 88.00 
+]
+        },
+        {
+            name:'Gesture-ORI',
+            type:'line',
+            // stack: '总量',
+            symbol:"emptyRect",
+            symbolSize:"15",
+            label: {
+                normal: {
+                    show: true,
+                    position: 'top',
+                    fontSize: 25,
+                    formatter: "{c}%",
+                    distance: 1,
+                    textBorderColor: "#fff",
+                    color:"rgb(51,75,92)"
+                }
+            },
+            itemStyle:{
+                color:"rgb(51,75,92)"
+            },
+            lineStyle:{
+               type:"dashed",
+               width:"5",
+               color:"rgb(51,75,92)"
+            },
+            data:[78.77, 79.79, 82.38, 79.30, 78.85]
+        },
+        {
+            name:'Gesture-IND',
+            type:'line',
+            symbol:"emptyTriangle",
+            symbolSize:"15",
+            // stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'top',
+                    fontSize: 25,
+                    formatter: "{c}%",
+                    distance: 1,
+                    textBorderColor: "#fff",
+                    color:"rgb(51,75,92)"
+                }
+            },
+            itemStyle:{
+                color:"rgb(51,75,92)"
+            },
+            lineStyle:{
+               type:"solid",
+               width:"5",
+               color:"rgb(51,75,92)"
+            },
+            data:[96.67, 96.72, 97.22, 96.72, 94.94]
+        }
+    ]
+};
+;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>

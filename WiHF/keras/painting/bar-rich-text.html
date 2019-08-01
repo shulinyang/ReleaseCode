@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body style="height: 100%; margin: 0">
+    <div id="container" style="height: 100%"></div>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/simplex.js"
+    ></script>
+    <script type="text/javascript">
+      var dom = document.getElementById("container");
+      var myChart = echarts.init(dom);
+      var app = {};
+      option = null;
+
+      var weatherIcons = {
+        Location: "./loc.png",
+        Orientation: "./ori.png",
+        Environment: "./env.png",
+        In_domain: "./in_domain.png"
+      };
+
+      var seriesLabel = {
+        normal: {
+          show: true,
+          textBorderColor: "#fff",
+          textBorderWidth: 2,
+          fontSize: 20,
+          //   fontWeight: "bold",
+          position: "right",
+          formatter: "{c}%"
+        }
+      };
+
+      option = {
+        // title: {
+        //   text: "Wheater Statistics"
+        // },
+        // tooltip: {
+        //   trigger: "axis",
+        //   axisPointer: {
+        //     type: "shadow"
+        //   }
+        // },
+        legend: {
+          data: ["Widar3.0", "Tally", "TallyExtend"],
+          orient: "vertical",
+          top: "8%",
+          right: "20%",
+          textStyle: {
+            fontSize: 20
+          }
+        },
+        grid: {
+          left: 300,
+          right: 300
+        },
+        xAxis: {
+          type: "value",
+          name: "Accuracy",
+          scale: true,
+          nameTextStyle: {
+            fontSize: 20,
+            fontWeight: "bold"
+          },
+          axisLabel: {
+            formatter: "{value}%",
+            fontSize: 20
+          }
+        },
+        yAxis: {
+          type: "category",
+          inverse: true,
+          data: ["Location", "Orientation", "Environment", "In_domain"],
+          axisLabel: {
+            formatter: function(value) {
+              return "{" + value + "| }\n{value|" + value + "}";
+            },
+            margin: 20,
+            rich: {
+              value: {
+                fontSize: 15,
+                fontWeight: "bold",
+                lineHeight: 30,
+                align: "center"
+              },
+              Location: {
+                height: 40,
+                align: "center",
+                backgroundColor: {
+                  image: weatherIcons.Location
+                }
+              },
+              Orientation: {
+                height: 40,
+                align: "center",
+                backgroundColor: {
+                  image: weatherIcons.Orientation
+                }
+              },
+              Environment: {
+                height: 40,
+                align: "center",
+                backgroundColor: {
+                  image: weatherIcons.Environment
+                }
+              },
+              In_domain: {
+                height: 40,
+                align: "center",
+                backgroundColor: {
+                  image: weatherIcons.In_domain
+                }
+              }
+            }
+          }
+        },
+        series: [
+          {
+            name: "Widar3.0",
+            type: "bar",
+            data: [88.39, 81.67, 90.92, 90.49],
+            label: seriesLabel
+          },
+          {
+            name: "Tally",
+            type: "bar",
+            label: seriesLabel,
+            data: [91.00,77.09, 92.45, 94.67]
+          },
+          {
+            name: "TallyExtend",
+            type: "bar",
+            label: seriesLabel,
+            data: [91.89,79.97, 95.55, 97.55]
+            // itemStyle:{
+            //     color:''
+            // }
+          }
+        ]
+      };
+      if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+      }
+    </script>
+  </body>
+</html>

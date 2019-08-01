@@ -1,0 +1,9 @@
+args： Namespace(datasource='wf_tally', domaintype=3, envdomain=1, gesturelist=[1, 2, 3, 4, 5, 6], gpuloadratio=0.4, gradientreversalrate=0.0, instancelist=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], matlabname=['velocity_bins_freq'], mode='train', nettype='CNN_GRU_wf_tally', numberofpath=5, orientationdomain=1, pathtype='TALLY', patience=10, pcalist=[0, 1, 2], positiondomain=4, receiverlist=[0, 1, 2, 3, 4, 5], serverset='remote', sizeoffeature=64, targettype=1, timelimit=58, traintestratio=0.8, userlist=[1, 2, 3, 4, 5, 6], yaxislength=20)
+ed:  [1, 2, 3, 4, 5, 6] pd:  [1, 2, 3, 4, 5] od:  [1, 5, 3, 4, 2]
+Loading Data...
+domain_type: 3
+Loaded Data wf_tally 1 (7200, 58, 6, 20, 3) 4 (7200, 6) 1 (1800, 58, 6, 20, 3)
+n_timesteps: 58
+Train on 6480 samples, validate on 720 samples
+Epoch 1/1000
+ - 25s - loss: 1.7923 - acc: 0.1653 - val_loss: 1.7954 - val_acc: 0.1639

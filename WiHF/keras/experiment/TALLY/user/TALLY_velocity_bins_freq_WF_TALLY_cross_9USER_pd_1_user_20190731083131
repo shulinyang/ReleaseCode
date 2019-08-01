@@ -1,0 +1,242 @@
+args： Namespace(datasource='wf_tally_slice', domaintype=2, envdomain=1, gesturelist=[1, 2, 3, 4, 5, 6], gpuloadratio=0.2, gradientreversalrate=0.0, instancelist=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], matlabname=['velocity_bins_freq'], mode='train', nettype='WF_TALLY_cross', numberofpath=5, orientationdomain=4, pathtype='TALLY', patience=10, pcalist=[0, 1, 2], positiondomain=1, receiverlist=[0, 1, 2, 3, 4, 5], serverset='remote', sizeoffeature=64, targettype=1, timelimit=58, traintestratio=0.8, userlist=[1, 2, 3, 4, 5, 6, 7, 8, 9], yaxislength=20)
+ed:  [1, 2, 3, 4, 5, 6, 7, 8, 9] pd:  [1, 5, 3, 4, 2] od:  [1, 2, 3, 4, 5]
+Loading Data...
+domain_type: 2
+Loaded Data wf_tally_slice 2 (10800, 29, 6, 20, 3) 4 (10800, 9) 2 (2700, 29, 6, 20, 3)
+n_timesteps: 29
+Train on 9720 samples, validate on 1080 samples
+Epoch 1/1000
+ - 38s - loss: 3.6110 - classifier_output_aux_loss: 1.9610 - classifier_output_main_loss: 1.6500 - classifier_output_aux_acc: 0.2377 - classifier_output_main_acc: 0.2975 - val_loss: 3.1011 - val_classifier_output_aux_loss: 1.6896 - val_classifier_output_main_loss: 1.4115 - val_classifier_output_aux_acc: 0.3833 - val_classifier_output_main_acc: 0.4426
+Epoch 2/1000
+ - 33s - loss: 3.0712 - classifier_output_aux_loss: 1.7099 - classifier_output_main_loss: 1.3613 - classifier_output_aux_acc: 0.3535 - classifier_output_main_acc: 0.4624 - val_loss: 2.5857 - val_classifier_output_aux_loss: 1.4347 - val_classifier_output_main_loss: 1.1510 - val_classifier_output_aux_acc: 0.4444 - val_classifier_output_main_acc: 0.5574
+Epoch 3/1000
+ - 32s - loss: 2.6562 - classifier_output_aux_loss: 1.4955 - classifier_output_main_loss: 1.1607 - classifier_output_aux_acc: 0.4410 - classifier_output_main_acc: 0.5536 - val_loss: 2.3899 - val_classifier_output_aux_loss: 1.2564 - val_classifier_output_main_loss: 1.1335 - val_classifier_output_aux_acc: 0.5454 - val_classifier_output_main_acc: 0.5806
+Epoch 4/1000
+ - 32s - loss: 2.2613 - classifier_output_aux_loss: 1.2723 - classifier_output_main_loss: 0.9889 - classifier_output_aux_acc: 0.5379 - classifier_output_main_acc: 0.6269 - val_loss: 1.8746 - val_classifier_output_aux_loss: 1.1030 - val_classifier_output_main_loss: 0.7716 - val_classifier_output_aux_acc: 0.6194 - val_classifier_output_main_acc: 0.7185
+Epoch 5/1000
+ - 31s - loss: 1.9244 - classifier_output_aux_loss: 1.1001 - classifier_output_main_loss: 0.8244 - classifier_output_aux_acc: 0.6079 - classifier_output_main_acc: 0.6980 - val_loss: 1.4932 - val_classifier_output_aux_loss: 0.9038 - val_classifier_output_main_loss: 0.5894 - val_classifier_output_aux_acc: 0.6685 - val_classifier_output_main_acc: 0.7889
+Epoch 6/1000
+ - 32s - loss: 1.6456 - classifier_output_aux_loss: 0.9694 - classifier_output_main_loss: 0.6762 - classifier_output_aux_acc: 0.6566 - classifier_output_main_acc: 0.7613 - val_loss: 1.2840 - val_classifier_output_aux_loss: 0.7848 - val_classifier_output_main_loss: 0.4992 - val_classifier_output_aux_acc: 0.7213 - val_classifier_output_main_acc: 0.8361
+Epoch 7/1000
+ - 32s - loss: 1.4447 - classifier_output_aux_loss: 0.8747 - classifier_output_main_loss: 0.5699 - classifier_output_aux_acc: 0.6953 - classifier_output_main_acc: 0.7975 - val_loss: 1.1260 - val_classifier_output_aux_loss: 0.6963 - val_classifier_output_main_loss: 0.4297 - val_classifier_output_aux_acc: 0.7593 - val_classifier_output_main_acc: 0.8556
+Epoch 8/1000
+ - 31s - loss: 1.2918 - classifier_output_aux_loss: 0.7874 - classifier_output_main_loss: 0.5044 - classifier_output_aux_acc: 0.7229 - classifier_output_main_acc: 0.8246 - val_loss: 1.0004 - val_classifier_output_aux_loss: 0.5988 - val_classifier_output_main_loss: 0.4016 - val_classifier_output_aux_acc: 0.7741 - val_classifier_output_main_acc: 0.8667
+Epoch 9/1000
+ - 31s - loss: 1.1695 - classifier_output_aux_loss: 0.7200 - classifier_output_main_loss: 0.4494 - classifier_output_aux_acc: 0.7506 - classifier_output_main_acc: 0.8481 - val_loss: 0.9627 - val_classifier_output_aux_loss: 0.6467 - val_classifier_output_main_loss: 0.3159 - val_classifier_output_aux_acc: 0.7880 - val_classifier_output_main_acc: 0.8833
+Epoch 10/1000
+ - 31s - loss: 1.0493 - classifier_output_aux_loss: 0.6533 - classifier_output_main_loss: 0.3960 - classifier_output_aux_acc: 0.7764 - classifier_output_main_acc: 0.8604 - val_loss: 0.8453 - val_classifier_output_aux_loss: 0.5550 - val_classifier_output_main_loss: 0.2903 - val_classifier_output_aux_acc: 0.8037 - val_classifier_output_main_acc: 0.9065
+Epoch 11/1000
+ - 31s - loss: 0.9571 - classifier_output_aux_loss: 0.6043 - classifier_output_main_loss: 0.3528 - classifier_output_aux_acc: 0.7926 - classifier_output_main_acc: 0.8799 - val_loss: 0.8949 - val_classifier_output_aux_loss: 0.6078 - val_classifier_output_main_loss: 0.2871 - val_classifier_output_aux_acc: 0.8046 - val_classifier_output_main_acc: 0.9037
+Epoch 12/1000
+ - 31s - loss: 0.8711 - classifier_output_aux_loss: 0.5470 - classifier_output_main_loss: 0.3241 - classifier_output_aux_acc: 0.8122 - classifier_output_main_acc: 0.8894 - val_loss: 0.8670 - val_classifier_output_aux_loss: 0.6277 - val_classifier_output_main_loss: 0.2392 - val_classifier_output_aux_acc: 0.7963 - val_classifier_output_main_acc: 0.9157
+Epoch 13/1000
+ - 31s - loss: 0.8109 - classifier_output_aux_loss: 0.5208 - classifier_output_main_loss: 0.2901 - classifier_output_aux_acc: 0.8274 - classifier_output_main_acc: 0.9017 - val_loss: 0.6512 - val_classifier_output_aux_loss: 0.3917 - val_classifier_output_main_loss: 0.2595 - val_classifier_output_aux_acc: 0.8750 - val_classifier_output_main_acc: 0.9222
+Epoch 14/1000
+ - 28s - loss: 0.7324 - classifier_output_aux_loss: 0.4712 - classifier_output_main_loss: 0.2612 - classifier_output_aux_acc: 0.8406 - classifier_output_main_acc: 0.9135 - val_loss: 0.6307 - val_classifier_output_aux_loss: 0.4145 - val_classifier_output_main_loss: 0.2162 - val_classifier_output_aux_acc: 0.8593 - val_classifier_output_main_acc: 0.9287
+Epoch 15/1000
+ - 28s - loss: 0.6690 - classifier_output_aux_loss: 0.4398 - classifier_output_main_loss: 0.2291 - classifier_output_aux_acc: 0.8561 - classifier_output_main_acc: 0.9258 - val_loss: 0.5391 - val_classifier_output_aux_loss: 0.3422 - val_classifier_output_main_loss: 0.1969 - val_classifier_output_aux_acc: 0.8889 - val_classifier_output_main_acc: 0.9481
+Epoch 16/1000
+ - 28s - loss: 0.6289 - classifier_output_aux_loss: 0.4099 - classifier_output_main_loss: 0.2190 - classifier_output_aux_acc: 0.8653 - classifier_output_main_acc: 0.9292 - val_loss: 0.5707 - val_classifier_output_aux_loss: 0.4065 - val_classifier_output_main_loss: 0.1642 - val_classifier_output_aux_acc: 0.8722 - val_classifier_output_main_acc: 0.9500
+Epoch 17/1000
+ - 28s - loss: 0.5783 - classifier_output_aux_loss: 0.3755 - classifier_output_main_loss: 0.2028 - classifier_output_aux_acc: 0.8780 - classifier_output_main_acc: 0.9345 - val_loss: 0.4430 - val_classifier_output_aux_loss: 0.2745 - val_classifier_output_main_loss: 0.1685 - val_classifier_output_aux_acc: 0.9111 - val_classifier_output_main_acc: 0.9491
+Epoch 18/1000
+ - 31s - loss: 0.5323 - classifier_output_aux_loss: 0.3457 - classifier_output_main_loss: 0.1866 - classifier_output_aux_acc: 0.8864 - classifier_output_main_acc: 0.9405 - val_loss: 0.5443 - val_classifier_output_aux_loss: 0.2624 - val_classifier_output_main_loss: 0.2819 - val_classifier_output_aux_acc: 0.9148 - val_classifier_output_main_acc: 0.9019
+Epoch 19/1000
+ - 32s - loss: 0.5090 - classifier_output_aux_loss: 0.3338 - classifier_output_main_loss: 0.1752 - classifier_output_aux_acc: 0.8895 - classifier_output_main_acc: 0.9460 - val_loss: 0.5004 - val_classifier_output_aux_loss: 0.3225 - val_classifier_output_main_loss: 0.1779 - val_classifier_output_aux_acc: 0.9056 - val_classifier_output_main_acc: 0.9454
+Epoch 20/1000
+ - 32s - loss: 0.4695 - classifier_output_aux_loss: 0.3095 - classifier_output_main_loss: 0.1600 - classifier_output_aux_acc: 0.9016 - classifier_output_main_acc: 0.9481 - val_loss: 0.3945 - val_classifier_output_aux_loss: 0.2792 - val_classifier_output_main_loss: 0.1153 - val_classifier_output_aux_acc: 0.9065 - val_classifier_output_main_acc: 0.9704
+Epoch 21/1000
+ - 31s - loss: 0.4423 - classifier_output_aux_loss: 0.2957 - classifier_output_main_loss: 0.1466 - classifier_output_aux_acc: 0.9039 - classifier_output_main_acc: 0.9560 - val_loss: 0.4520 - val_classifier_output_aux_loss: 0.2510 - val_classifier_output_main_loss: 0.2009 - val_classifier_output_aux_acc: 0.9167 - val_classifier_output_main_acc: 0.9546
+Epoch 22/1000
+ - 32s - loss: 0.4224 - classifier_output_aux_loss: 0.2770 - classifier_output_main_loss: 0.1454 - classifier_output_aux_acc: 0.9133 - classifier_output_main_acc: 0.9556 - val_loss: 0.4009 - val_classifier_output_aux_loss: 0.1982 - val_classifier_output_main_loss: 0.2027 - val_classifier_output_aux_acc: 0.9481 - val_classifier_output_main_acc: 0.9398
+Epoch 23/1000
+ - 31s - loss: 0.3926 - classifier_output_aux_loss: 0.2634 - classifier_output_main_loss: 0.1293 - classifier_output_aux_acc: 0.9181 - classifier_output_main_acc: 0.9598 - val_loss: 0.3586 - val_classifier_output_aux_loss: 0.2083 - val_classifier_output_main_loss: 0.1503 - val_classifier_output_aux_acc: 0.9352 - val_classifier_output_main_acc: 0.9620
+Epoch 24/1000
+ - 32s - loss: 0.3809 - classifier_output_aux_loss: 0.2498 - classifier_output_main_loss: 0.1312 - classifier_output_aux_acc: 0.9209 - classifier_output_main_acc: 0.9642 - val_loss: 0.3195 - val_classifier_output_aux_loss: 0.1863 - val_classifier_output_main_loss: 0.1332 - val_classifier_output_aux_acc: 0.9481 - val_classifier_output_main_acc: 0.9648
+Epoch 25/1000
+ - 32s - loss: 0.3619 - classifier_output_aux_loss: 0.2415 - classifier_output_main_loss: 0.1204 - classifier_output_aux_acc: 0.9223 - classifier_output_main_acc: 0.9617 - val_loss: 0.3596 - val_classifier_output_aux_loss: 0.1869 - val_classifier_output_main_loss: 0.1727 - val_classifier_output_aux_acc: 0.9407 - val_classifier_output_main_acc: 0.9583
+Epoch 26/1000
+ - 32s - loss: 0.3378 - classifier_output_aux_loss: 0.2240 - classifier_output_main_loss: 0.1138 - classifier_output_aux_acc: 0.9298 - classifier_output_main_acc: 0.9650 - val_loss: 0.2818 - val_classifier_output_aux_loss: 0.1682 - val_classifier_output_main_loss: 0.1136 - val_classifier_output_aux_acc: 0.9519 - val_classifier_output_main_acc: 0.9667
+Epoch 27/1000
+ - 32s - loss: 0.3247 - classifier_output_aux_loss: 0.2090 - classifier_output_main_loss: 0.1158 - classifier_output_aux_acc: 0.9335 - classifier_output_main_acc: 0.9664 - val_loss: 0.3043 - val_classifier_output_aux_loss: 0.1830 - val_classifier_output_main_loss: 0.1213 - val_classifier_output_aux_acc: 0.9509 - val_classifier_output_main_acc: 0.9657
+Epoch 28/1000
+ - 32s - loss: 0.3100 - classifier_output_aux_loss: 0.1998 - classifier_output_main_loss: 0.1103 - classifier_output_aux_acc: 0.9336 - classifier_output_main_acc: 0.9660 - val_loss: 0.3917 - val_classifier_output_aux_loss: 0.2743 - val_classifier_output_main_loss: 0.1174 - val_classifier_output_aux_acc: 0.9130 - val_classifier_output_main_acc: 0.9630
+Epoch 29/1000
+ - 32s - loss: 0.2903 - classifier_output_aux_loss: 0.1973 - classifier_output_main_loss: 0.0930 - classifier_output_aux_acc: 0.9382 - classifier_output_main_acc: 0.9714 - val_loss: 0.3057 - val_classifier_output_aux_loss: 0.1571 - val_classifier_output_main_loss: 0.1486 - val_classifier_output_aux_acc: 0.9639 - val_classifier_output_main_acc: 0.9667
+Epoch 30/1000
+ - 32s - loss: 0.2961 - classifier_output_aux_loss: 0.1892 - classifier_output_main_loss: 0.1070 - classifier_output_aux_acc: 0.9385 - classifier_output_main_acc: 0.9704 - val_loss: 0.3124 - val_classifier_output_aux_loss: 0.1878 - val_classifier_output_main_loss: 0.1246 - val_classifier_output_aux_acc: 0.9454 - val_classifier_output_main_acc: 0.9787
+Epoch 31/1000
+ - 33s - loss: 0.2987 - classifier_output_aux_loss: 0.2026 - classifier_output_main_loss: 0.0961 - classifier_output_aux_acc: 0.9399 - classifier_output_main_acc: 0.9727 - val_loss: 0.2512 - val_classifier_output_aux_loss: 0.1608 - val_classifier_output_main_loss: 0.0904 - val_classifier_output_aux_acc: 0.9537 - val_classifier_output_main_acc: 0.9806
+Epoch 32/1000
+ - 32s - loss: 0.2798 - classifier_output_aux_loss: 0.1903 - classifier_output_main_loss: 0.0895 - classifier_output_aux_acc: 0.9403 - classifier_output_main_acc: 0.9735 - val_loss: 0.3079 - val_classifier_output_aux_loss: 0.1784 - val_classifier_output_main_loss: 0.1295 - val_classifier_output_aux_acc: 0.9519 - val_classifier_output_main_acc: 0.9639
+Epoch 33/1000
+ - 32s - loss: 0.2603 - classifier_output_aux_loss: 0.1737 - classifier_output_main_loss: 0.0865 - classifier_output_aux_acc: 0.9474 - classifier_output_main_acc: 0.9763 - val_loss: 0.2490 - val_classifier_output_aux_loss: 0.1512 - val_classifier_output_main_loss: 0.0978 - val_classifier_output_aux_acc: 0.9509 - val_classifier_output_main_acc: 0.9778
+Epoch 34/1000
+ - 32s - loss: 0.2581 - classifier_output_aux_loss: 0.1772 - classifier_output_main_loss: 0.0809 - classifier_output_aux_acc: 0.9471 - classifier_output_main_acc: 0.9760 - val_loss: 0.3446 - val_classifier_output_aux_loss: 0.1703 - val_classifier_output_main_loss: 0.1743 - val_classifier_output_aux_acc: 0.9519 - val_classifier_output_main_acc: 0.9685
+Epoch 35/1000
+ - 32s - loss: 0.2627 - classifier_output_aux_loss: 0.1748 - classifier_output_main_loss: 0.0878 - classifier_output_aux_acc: 0.9480 - classifier_output_main_acc: 0.9756 - val_loss: 0.2747 - val_classifier_output_aux_loss: 0.1267 - val_classifier_output_main_loss: 0.1480 - val_classifier_output_aux_acc: 0.9639 - val_classifier_output_main_acc: 0.9667
+Epoch 36/1000
+ - 32s - loss: 0.2459 - classifier_output_aux_loss: 0.1704 - classifier_output_main_loss: 0.0754 - classifier_output_aux_acc: 0.9493 - classifier_output_main_acc: 0.9785 - val_loss: 0.2827 - val_classifier_output_aux_loss: 0.1458 - val_classifier_output_main_loss: 0.1369 - val_classifier_output_aux_acc: 0.9639 - val_classifier_output_main_acc: 0.9750
+Epoch 37/1000
+ - 32s - loss: 0.2495 - classifier_output_aux_loss: 0.1690 - classifier_output_main_loss: 0.0804 - classifier_output_aux_acc: 0.9484 - classifier_output_main_acc: 0.9780 - val_loss: 0.2965 - val_classifier_output_aux_loss: 0.1636 - val_classifier_output_main_loss: 0.1329 - val_classifier_output_aux_acc: 0.9620 - val_classifier_output_main_acc: 0.9750
+Epoch 38/1000
+ - 32s - loss: 0.2384 - classifier_output_aux_loss: 0.1584 - classifier_output_main_loss: 0.0800 - classifier_output_aux_acc: 0.9522 - classifier_output_main_acc: 0.9767 - val_loss: 0.2499 - val_classifier_output_aux_loss: 0.1000 - val_classifier_output_main_loss: 0.1499 - val_classifier_output_aux_acc: 0.9722 - val_classifier_output_main_acc: 0.9787
+Epoch 39/1000
+ - 33s - loss: 0.2511 - classifier_output_aux_loss: 0.1587 - classifier_output_main_loss: 0.0924 - classifier_output_aux_acc: 0.9520 - classifier_output_main_acc: 0.9744 - val_loss: 0.2454 - val_classifier_output_aux_loss: 0.1542 - val_classifier_output_main_loss: 0.0912 - val_classifier_output_aux_acc: 0.9556 - val_classifier_output_main_acc: 0.9806
+Epoch 40/1000
+ - 33s - loss: 0.2306 - classifier_output_aux_loss: 0.1584 - classifier_output_main_loss: 0.0721 - classifier_output_aux_acc: 0.9560 - classifier_output_main_acc: 0.9803 - val_loss: 0.3011 - val_classifier_output_aux_loss: 0.1531 - val_classifier_output_main_loss: 0.1480 - val_classifier_output_aux_acc: 0.9648 - val_classifier_output_main_acc: 0.9815
+Epoch 41/1000
+ - 33s - loss: 0.2141 - classifier_output_aux_loss: 0.1467 - classifier_output_main_loss: 0.0673 - classifier_output_aux_acc: 0.9580 - classifier_output_main_acc: 0.9812 - val_loss: 0.2961 - val_classifier_output_aux_loss: 0.1539 - val_classifier_output_main_loss: 0.1422 - val_classifier_output_aux_acc: 0.9630 - val_classifier_output_main_acc: 0.9731
+Epoch 42/1000
+ - 34s - loss: 0.2087 - classifier_output_aux_loss: 0.1358 - classifier_output_main_loss: 0.0728 - classifier_output_aux_acc: 0.9586 - classifier_output_main_acc: 0.9808 - val_loss: 0.3070 - val_classifier_output_aux_loss: 0.1245 - val_classifier_output_main_loss: 0.1825 - val_classifier_output_aux_acc: 0.9722 - val_classifier_output_main_acc: 0.9685
+Epoch 43/1000
+ - 34s - loss: 0.2171 - classifier_output_aux_loss: 0.1415 - classifier_output_main_loss: 0.0757 - classifier_output_aux_acc: 0.9604 - classifier_output_main_acc: 0.9792 - val_loss: 0.2433 - val_classifier_output_aux_loss: 0.1637 - val_classifier_output_main_loss: 0.0796 - val_classifier_output_aux_acc: 0.9565 - val_classifier_output_main_acc: 0.9824
+Epoch 44/1000
+ - 33s - loss: 0.2293 - classifier_output_aux_loss: 0.1406 - classifier_output_main_loss: 0.0887 - classifier_output_aux_acc: 0.9603 - classifier_output_main_acc: 0.9781 - val_loss: 0.2814 - val_classifier_output_aux_loss: 0.1489 - val_classifier_output_main_loss: 0.1325 - val_classifier_output_aux_acc: 0.9583 - val_classifier_output_main_acc: 0.9685
+Epoch 45/1000
+ - 33s - loss: 0.2190 - classifier_output_aux_loss: 0.1477 - classifier_output_main_loss: 0.0713 - classifier_output_aux_acc: 0.9603 - classifier_output_main_acc: 0.9803 - val_loss: 0.3694 - val_classifier_output_aux_loss: 0.2396 - val_classifier_output_main_loss: 0.1298 - val_classifier_output_aux_acc: 0.9481 - val_classifier_output_main_acc: 0.9741
+Epoch 46/1000
+ - 33s - loss: 0.2109 - classifier_output_aux_loss: 0.1422 - classifier_output_main_loss: 0.0687 - classifier_output_aux_acc: 0.9620 - classifier_output_main_acc: 0.9806 - val_loss: 0.2841 - val_classifier_output_aux_loss: 0.1451 - val_classifier_output_main_loss: 0.1390 - val_classifier_output_aux_acc: 0.9620 - val_classifier_output_main_acc: 0.9750
+Epoch 47/1000
+ - 33s - loss: 0.2109 - classifier_output_aux_loss: 0.1455 - classifier_output_main_loss: 0.0654 - classifier_output_aux_acc: 0.9588 - classifier_output_main_acc: 0.9833 - val_loss: 0.3141 - val_classifier_output_aux_loss: 0.2021 - val_classifier_output_main_loss: 0.1120 - val_classifier_output_aux_acc: 0.9556 - val_classifier_output_main_acc: 0.9796
+Epoch 48/1000
+ - 33s - loss: 0.2004 - classifier_output_aux_loss: 0.1303 - classifier_output_main_loss: 0.0701 - classifier_output_aux_acc: 0.9643 - classifier_output_main_acc: 0.9814 - val_loss: 0.3210 - val_classifier_output_aux_loss: 0.2127 - val_classifier_output_main_loss: 0.1083 - val_classifier_output_aux_acc: 0.9509 - val_classifier_output_main_acc: 0.9796
+Epoch 49/1000
+ - 34s - loss: 0.1975 - classifier_output_aux_loss: 0.1366 - classifier_output_main_loss: 0.0609 - classifier_output_aux_acc: 0.9646 - classifier_output_main_acc: 0.9850 - val_loss: 0.3267 - val_classifier_output_aux_loss: 0.1972 - val_classifier_output_main_loss: 0.1294 - val_classifier_output_aux_acc: 0.9583 - val_classifier_output_main_acc: 0.9713
+Epoch 50/1000
+ - 33s - loss: 0.2231 - classifier_output_aux_loss: 0.1434 - classifier_output_main_loss: 0.0797 - classifier_output_aux_acc: 0.9626 - classifier_output_main_acc: 0.9806 - val_loss: 0.4219 - val_classifier_output_aux_loss: 0.3079 - val_classifier_output_main_loss: 0.1140 - val_classifier_output_aux_acc: 0.9343 - val_classifier_output_main_acc: 0.9806
+Epoch 51/1000
+ - 33s - loss: 0.1806 - classifier_output_aux_loss: 0.1245 - classifier_output_main_loss: 0.0561 - classifier_output_aux_acc: 0.9651 - classifier_output_main_acc: 0.9848 - val_loss: 0.2010 - val_classifier_output_aux_loss: 0.1155 - val_classifier_output_main_loss: 0.0854 - val_classifier_output_aux_acc: 0.9676 - val_classifier_output_main_acc: 0.9870
+Epoch 52/1000
+ - 34s - loss: 0.1861 - classifier_output_aux_loss: 0.1323 - classifier_output_main_loss: 0.0537 - classifier_output_aux_acc: 0.9654 - classifier_output_main_acc: 0.9847 - val_loss: 0.2743 - val_classifier_output_aux_loss: 0.1463 - val_classifier_output_main_loss: 0.1280 - val_classifier_output_aux_acc: 0.9676 - val_classifier_output_main_acc: 0.9796
+Epoch 53/1000
+ - 32s - loss: 0.1891 - classifier_output_aux_loss: 0.1241 - classifier_output_main_loss: 0.0649 - classifier_output_aux_acc: 0.9674 - classifier_output_main_acc: 0.9854 - val_loss: 0.2939 - val_classifier_output_aux_loss: 0.1564 - val_classifier_output_main_loss: 0.1375 - val_classifier_output_aux_acc: 0.9648 - val_classifier_output_main_acc: 0.9769
+Epoch 54/1000
+ - 32s - loss: 0.1865 - classifier_output_aux_loss: 0.1242 - classifier_output_main_loss: 0.0622 - classifier_output_aux_acc: 0.9676 - classifier_output_main_acc: 0.9840 - val_loss: 0.2788 - val_classifier_output_aux_loss: 0.1881 - val_classifier_output_main_loss: 0.0907 - val_classifier_output_aux_acc: 0.9574 - val_classifier_output_main_acc: 0.9880
+Epoch 55/1000
+ - 32s - loss: 0.1908 - classifier_output_aux_loss: 0.1271 - classifier_output_main_loss: 0.0637 - classifier_output_aux_acc: 0.9669 - classifier_output_main_acc: 0.9833 - val_loss: 0.2530 - val_classifier_output_aux_loss: 0.1460 - val_classifier_output_main_loss: 0.1070 - val_classifier_output_aux_acc: 0.9648 - val_classifier_output_main_acc: 0.9778
+Epoch 56/1000
+ - 32s - loss: 0.1748 - classifier_output_aux_loss: 0.1114 - classifier_output_main_loss: 0.0633 - classifier_output_aux_acc: 0.9699 - classifier_output_main_acc: 0.9854 - val_loss: 0.2266 - val_classifier_output_aux_loss: 0.1385 - val_classifier_output_main_loss: 0.0880 - val_classifier_output_aux_acc: 0.9667 - val_classifier_output_main_acc: 0.9815
+Epoch 57/1000
+ - 32s - loss: 0.1740 - classifier_output_aux_loss: 0.1170 - classifier_output_main_loss: 0.0570 - classifier_output_aux_acc: 0.9686 - classifier_output_main_acc: 0.9856 - val_loss: 0.2503 - val_classifier_output_aux_loss: 0.1287 - val_classifier_output_main_loss: 0.1216 - val_classifier_output_aux_acc: 0.9722 - val_classifier_output_main_acc: 0.9815
+Epoch 58/1000
+ - 74s - loss: 0.1769 - classifier_output_aux_loss: 0.1203 - classifier_output_main_loss: 0.0566 - classifier_output_aux_acc: 0.9686 - classifier_output_main_acc: 0.9871 - val_loss: 0.1965 - val_classifier_output_aux_loss: 0.1048 - val_classifier_output_main_loss: 0.0916 - val_classifier_output_aux_acc: 0.9694 - val_classifier_output_main_acc: 0.9833
+Epoch 59/1000
+ - 92s - loss: 0.1750 - classifier_output_aux_loss: 0.1162 - classifier_output_main_loss: 0.0588 - classifier_output_aux_acc: 0.9678 - classifier_output_main_acc: 0.9846 - val_loss: 0.2066 - val_classifier_output_aux_loss: 0.1176 - val_classifier_output_main_loss: 0.0890 - val_classifier_output_aux_acc: 0.9722 - val_classifier_output_main_acc: 0.9843
+Epoch 60/1000
+ - 90s - loss: 0.1813 - classifier_output_aux_loss: 0.1270 - classifier_output_main_loss: 0.0543 - classifier_output_aux_acc: 0.9697 - classifier_output_main_acc: 0.9872 - val_loss: 0.4047 - val_classifier_output_aux_loss: 0.2919 - val_classifier_output_main_loss: 0.1128 - val_classifier_output_aux_acc: 0.9361 - val_classifier_output_main_acc: 0.9806
+Epoch 61/1000
+ - 48s - loss: 0.1775 - classifier_output_aux_loss: 0.1139 - classifier_output_main_loss: 0.0636 - classifier_output_aux_acc: 0.9699 - classifier_output_main_acc: 0.9852 - val_loss: 0.2295 - val_classifier_output_aux_loss: 0.1221 - val_classifier_output_main_loss: 0.1074 - val_classifier_output_aux_acc: 0.9713 - val_classifier_output_main_acc: 0.9833
+Epoch 62/1000
+ - 33s - loss: 0.1809 - classifier_output_aux_loss: 0.1264 - classifier_output_main_loss: 0.0545 - classifier_output_aux_acc: 0.9686 - classifier_output_main_acc: 0.9858 - val_loss: 0.2640 - val_classifier_output_aux_loss: 0.1450 - val_classifier_output_main_loss: 0.1190 - val_classifier_output_aux_acc: 0.9657 - val_classifier_output_main_acc: 0.9833
+Epoch 63/1000
+ - 88s - loss: 0.1781 - classifier_output_aux_loss: 0.1231 - classifier_output_main_loss: 0.0551 - classifier_output_aux_acc: 0.9654 - classifier_output_main_acc: 0.9878 - val_loss: 0.1736 - val_classifier_output_aux_loss: 0.0909 - val_classifier_output_main_loss: 0.0827 - val_classifier_output_aux_acc: 0.9778 - val_classifier_output_main_acc: 0.9870
+Epoch 64/1000
+ - 92s - loss: 0.1585 - classifier_output_aux_loss: 0.1031 - classifier_output_main_loss: 0.0554 - classifier_output_aux_acc: 0.9729 - classifier_output_main_acc: 0.9851 - val_loss: 0.2530 - val_classifier_output_aux_loss: 0.1561 - val_classifier_output_main_loss: 0.0969 - val_classifier_output_aux_acc: 0.9676 - val_classifier_output_main_acc: 0.9833
+Epoch 65/1000
+ - 81s - loss: 0.1593 - classifier_output_aux_loss: 0.1113 - classifier_output_main_loss: 0.0480 - classifier_output_aux_acc: 0.9702 - classifier_output_main_acc: 0.9876 - val_loss: 0.2928 - val_classifier_output_aux_loss: 0.1157 - val_classifier_output_main_loss: 0.1770 - val_classifier_output_aux_acc: 0.9685 - val_classifier_output_main_acc: 0.9778
+Epoch 66/1000
+ - 27s - loss: 0.1678 - classifier_output_aux_loss: 0.1101 - classifier_output_main_loss: 0.0577 - classifier_output_aux_acc: 0.9710 - classifier_output_main_acc: 0.9879 - val_loss: 0.1821 - val_classifier_output_aux_loss: 0.1081 - val_classifier_output_main_loss: 0.0740 - val_classifier_output_aux_acc: 0.9694 - val_classifier_output_main_acc: 0.9852
+Epoch 67/1000
+ - 26s - loss: 0.1597 - classifier_output_aux_loss: 0.1001 - classifier_output_main_loss: 0.0596 - classifier_output_aux_acc: 0.9742 - classifier_output_main_acc: 0.9855 - val_loss: 0.2926 - val_classifier_output_aux_loss: 0.1750 - val_classifier_output_main_loss: 0.1176 - val_classifier_output_aux_acc: 0.9657 - val_classifier_output_main_acc: 0.9806
+Epoch 68/1000
+ - 74s - loss: 0.1633 - classifier_output_aux_loss: 0.1146 - classifier_output_main_loss: 0.0487 - classifier_output_aux_acc: 0.9733 - classifier_output_main_acc: 0.9874 - val_loss: 0.2538 - val_classifier_output_aux_loss: 0.1740 - val_classifier_output_main_loss: 0.0797 - val_classifier_output_aux_acc: 0.9639 - val_classifier_output_main_acc: 0.9861
+Epoch 69/1000
+ - 88s - loss: 0.1777 - classifier_output_aux_loss: 0.1295 - classifier_output_main_loss: 0.0482 - classifier_output_aux_acc: 0.9683 - classifier_output_main_acc: 0.9879 - val_loss: 0.2505 - val_classifier_output_aux_loss: 0.1310 - val_classifier_output_main_loss: 0.1195 - val_classifier_output_aux_acc: 0.9741 - val_classifier_output_main_acc: 0.9787
+Epoch 70/1000
+ - 89s - loss: 0.1799 - classifier_output_aux_loss: 0.1215 - classifier_output_main_loss: 0.0585 - classifier_output_aux_acc: 0.9713 - classifier_output_main_acc: 0.9876 - val_loss: 0.1491 - val_classifier_output_aux_loss: 0.0703 - val_classifier_output_main_loss: 0.0788 - val_classifier_output_aux_acc: 0.9815 - val_classifier_output_main_acc: 0.9861
+Epoch 71/1000
+ - 40s - loss: 0.1786 - classifier_output_aux_loss: 0.1245 - classifier_output_main_loss: 0.0540 - classifier_output_aux_acc: 0.9700 - classifier_output_main_acc: 0.9882 - val_loss: 0.2183 - val_classifier_output_aux_loss: 0.1190 - val_classifier_output_main_loss: 0.0993 - val_classifier_output_aux_acc: 0.9741 - val_classifier_output_main_acc: 0.9833
+Epoch 72/1000
+ - 35s - loss: 0.1568 - classifier_output_aux_loss: 0.1023 - classifier_output_main_loss: 0.0545 - classifier_output_aux_acc: 0.9734 - classifier_output_main_acc: 0.9869 - val_loss: 0.2460 - val_classifier_output_aux_loss: 0.1453 - val_classifier_output_main_loss: 0.1008 - val_classifier_output_aux_acc: 0.9741 - val_classifier_output_main_acc: 0.9824
+Epoch 73/1000
+ - 92s - loss: 0.1565 - classifier_output_aux_loss: 0.1008 - classifier_output_main_loss: 0.0557 - classifier_output_aux_acc: 0.9741 - classifier_output_main_acc: 0.9872 - val_loss: 0.1865 - val_classifier_output_aux_loss: 0.0984 - val_classifier_output_main_loss: 0.0881 - val_classifier_output_aux_acc: 0.9713 - val_classifier_output_main_acc: 0.9787
+Epoch 74/1000
+ - 91s - loss: 0.1456 - classifier_output_aux_loss: 0.0994 - classifier_output_main_loss: 0.0462 - classifier_output_aux_acc: 0.9770 - classifier_output_main_acc: 0.9880 - val_loss: 0.2745 - val_classifier_output_aux_loss: 0.1759 - val_classifier_output_main_loss: 0.0986 - val_classifier_output_aux_acc: 0.9676 - val_classifier_output_main_acc: 0.9843
+Epoch 75/1000
+ - 82s - loss: 0.1758 - classifier_output_aux_loss: 0.1137 - classifier_output_main_loss: 0.0621 - classifier_output_aux_acc: 0.9718 - classifier_output_main_acc: 0.9871 - val_loss: 0.2275 - val_classifier_output_aux_loss: 0.1398 - val_classifier_output_main_loss: 0.0877 - val_classifier_output_aux_acc: 0.9676 - val_classifier_output_main_acc: 0.9824
+Epoch 76/1000
+ - 33s - loss: 0.1719 - classifier_output_aux_loss: 0.1145 - classifier_output_main_loss: 0.0574 - classifier_output_aux_acc: 0.9736 - classifier_output_main_acc: 0.9881 - val_loss: 0.2525 - val_classifier_output_aux_loss: 0.1877 - val_classifier_output_main_loss: 0.0648 - val_classifier_output_aux_acc: 0.9704 - val_classifier_output_main_acc: 0.9907
+Epoch 77/1000
+ - 55s - loss: 0.1674 - classifier_output_aux_loss: 0.1106 - classifier_output_main_loss: 0.0568 - classifier_output_aux_acc: 0.9730 - classifier_output_main_acc: 0.9889 - val_loss: 0.3104 - val_classifier_output_aux_loss: 0.1897 - val_classifier_output_main_loss: 0.1208 - val_classifier_output_aux_acc: 0.9611 - val_classifier_output_main_acc: 0.9741
+Epoch 78/1000
+ - 91s - loss: 0.1525 - classifier_output_aux_loss: 0.0985 - classifier_output_main_loss: 0.0540 - classifier_output_aux_acc: 0.9736 - classifier_output_main_acc: 0.9880 - val_loss: 0.2436 - val_classifier_output_aux_loss: 0.1552 - val_classifier_output_main_loss: 0.0883 - val_classifier_output_aux_acc: 0.9620 - val_classifier_output_main_acc: 0.9852
+Epoch 79/1000
+ - 95s - loss: 0.1569 - classifier_output_aux_loss: 0.1073 - classifier_output_main_loss: 0.0496 - classifier_output_aux_acc: 0.9710 - classifier_output_main_acc: 0.9891 - val_loss: 0.2824 - val_classifier_output_aux_loss: 0.1668 - val_classifier_output_main_loss: 0.1155 - val_classifier_output_aux_acc: 0.9667 - val_classifier_output_main_acc: 0.9796
+Epoch 80/1000
+ - 52s - loss: 0.1495 - classifier_output_aux_loss: 0.1036 - classifier_output_main_loss: 0.0459 - classifier_output_aux_acc: 0.9748 - classifier_output_main_acc: 0.9892 - val_loss: 0.3112 - val_classifier_output_aux_loss: 0.1988 - val_classifier_output_main_loss: 0.1125 - val_classifier_output_aux_acc: 0.9556 - val_classifier_output_main_acc: 0.9833
+time_consuming: 6.279999999999745 2700 0.0023259259259258316
+cm_aux: [[130  16  13   5  23  17  81  10   5]
+ [  0 133  52   3  55   6  33   8  10]
+ [  2  53 181  18   7   2   5  22  10]
+ [  0   1   2 266   0   8   8   6   9]
+ [  1  16   4  11 145  55  32  27   9]
+ [  1  11  12  62  29 115   5  19  46]
+ [  8  21   1  23  31  12 186  12   6]
+ [  0   9  31  54   2  31   0 153  20]
+ [  2   1   9  51   1  12   4   2 218]]
+cm_main: [[431   1   2   4   4   8]
+ [  6 403   0   2  26  13]
+ [  4   5 407  23   3   8]
+ [  1   2  16 421   6   4]
+ [  6   7   0   0 432   5]
+ [  8   6   1   1  12 422]]
+normalized cm_main: [[0.95777778 0.00222222 0.00444444 0.00888889 0.00888889 0.01777778]
+ [0.01333333 0.89555556 0.         0.00444444 0.05777778 0.02888889]
+ [0.00888889 0.01111111 0.90444444 0.05111111 0.00666667 0.01777778]
+ [0.00222222 0.00444444 0.03555556 0.93555556 0.01333333 0.00888889]
+ [0.01333333 0.01555556 0.         0.         0.96       0.01111111]
+ [0.01777778 0.01333333 0.00222222 0.00222222 0.02666667 0.93777778]]
+metrics: ['loss', 'classifier_output_aux_loss', 'classifier_output_main_loss', 'classifier_output_aux_acc', 'classifier_output_main_acc']
+Test score: [4.225298452730532, 3.7888638141420152, 0.4364346362763812, 0.5655555555555556, 0.9318518517635487]
+Test loss: 3.7888638141420152
+Test accuracy of aux: 0.5655555555555556
+Test accuracy of main: 0.9318518517635487
+Saving model to disk 
+
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+main_input_1 (InputLayer)       (None, 29, 6, 20, 3) 0                                            
+__________________________________________________________________________________________________
+main_input_2 (InputLayer)       (None, 29, 6, 20, 3) 0                                            
+__________________________________________________________________________________________________
+feature_output_aux (TimeDistrib (None, 29, 64)       78400       main_input_1[0][0]               
+__________________________________________________________________________________________________
+feature_output_main (TimeDistri (None, 29, 64)       78400       main_input_2[0][0]               
+__________________________________________________________________________________________________
+gru_1 (GRU)                     (None, 128)          74112       feature_output_aux[0][0]         
+__________________________________________________________________________________________________
+gru_2 (GRU)                     (None, 128)          74112       feature_output_main[0][0]        
+__________________________________________________________________________________________________
+dropout_2 (Dropout)             (None, 128)          0           gru_1[0][0]                      
+__________________________________________________________________________________________________
+dropout_4 (Dropout)             (None, 128)          0           gru_2[0][0]                      
+__________________________________________________________________________________________________
+gradient_reversal_1 (GradientRe (None, 128)          0           dropout_4[0][0]                  
+__________________________________________________________________________________________________
+gradient_reversal_2 (GradientRe (None, 128)          0           dropout_2[0][0]                  
+__________________________________________________________________________________________________
+concatenate_1 (Concatenate)     (None, 256)          0           dropout_2[0][0]                  
+                                                                 gradient_reversal_1[0][0]        
+__________________________________________________________________________________________________
+concatenate_2 (Concatenate)     (None, 256)          0           dropout_4[0][0]                  
+                                                                 gradient_reversal_2[0][0]        
+__________________________________________________________________________________________________
+dense_5 (Dense)                 (None, 128)          32896       concatenate_1[0][0]              
+__________________________________________________________________________________________________
+dense_6 (Dense)                 (None, 128)          32896       concatenate_2[0][0]              
+__________________________________________________________________________________________________
+dropout_5 (Dropout)             (None, 128)          0           dense_5[0][0]                    
+__________________________________________________________________________________________________
+dropout_6 (Dropout)             (None, 128)          0           dense_6[0][0]                    
+__________________________________________________________________________________________________
+classifier_output_aux (Dense)   (None, 9)            1161        dropout_5[0][0]                  
+__________________________________________________________________________________________________
+classifier_output_main (Dense)  (None, 6)            774         dropout_6[0][0]                  
+==================================================================================================
+Total params: 372,751
+Trainable params: 372,751
+Non-trainable params: 0
+__________________________________________________________________________________________________
+None

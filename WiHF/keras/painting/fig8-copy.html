@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body style="height: 100%; margin: 0">
+    <div id="container" style="height: 100%"></div>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://echarts.baidu.com/gallery/vendors/simplex.js"
+    ></script>
+    <script type="text/javascript">
+      var dom = document.getElementById("container");
+      var myChart = echarts.init(dom);
+      var app = {};
+      var seriesLabel = {
+        normal: {
+          show: true,
+          // textBorderColor: "#fff",
+          textBorderWidth: 2,
+          fontSize: 25,
+          //   fontWeight: "bold",
+          position: "top",
+          formatter: "{c}%"
+        }
+      };
+      option = null;
+      option = {
+        legend: {
+          // orient: "vertical",
+          data:["Widar3", "TallyM","TallyE"],
+          top: "4%",
+          // right: "40%",
+          textStyle: {
+            fontSize: 30
+          }
+        },
+        tooltip: {},
+        grid: {
+          right: "20%",
+          left:"20%",
+          top:"10%",
+          bottom:"20%"
+        },
+        xAxis: {
+          type: "category",
+          // name: "Target Index",
+          // nameLocation:"center",
+          // nameGap:35,
+          // nameTextStyle: {
+          //   fontSize: 30,
+          //   // fontWeight: "bold"
+          // },
+          splitArea: {
+            show: true
+          },
+          axisLabel: {
+            // formatter: "{value}%",
+            fontSize: 30
+          },
+          data:["ORI", "LOC","ENV", "IND"]
+          
+        },
+        yAxis: {
+          type: "value",
+          name: "Accuracy",
+          interval :10,
+          scale: true,
+          nameTextStyle: {
+            fontSize: 30,
+            // fontWeight: "bold"
+          },
+          axisLabel: {
+            formatter: "{value}%",
+            fontSize: 30
+          },
+        },
+        // Declare several bar series, each will be mapped
+        // to a column of dataset.source by default.
+        series: [
+          { type: "boxplot",
+          name:'Widar3',
+            label: seriesLabel,
+            data:[
+            [79.17,89.92,89.75,84.08,78.92,78.00,89.25,89.58,84.08,76.83,77.67,88.83,89.33,83.75,75.92,77.25,88.58,89.08,83.67,75.42,77.00,88.50,88.83,83.58,73.92,77.00,88.50,88.50,83.42,73.83,76.67,88.00,88.33,83.00,73.58,75.83,87.92,88.25,82.92,73.25,75.83,87.33,88.08,82.83,72.58,75.25,85.42,87.42,82.08,72.42],
+            [91.08,89.33,91.92,88.25,94.00,
+91.00,88.83,91.00,86.17,93.75,
+91.00,88.42,90.92,86.08,93.58,
+90.58,88.17,90.83,85.67,93.17,
+89.83,87.83,90.67,85.08,92.92,
+89.00,87.75,90.33,84.67,92.58,
+88.92,87.50,90.33,84.50,92.42,
+88.67,87.33,90.17,84.17,92.00,
+88.67,86.50,89.92,83.50,92.00,
+87.58,86.50,87.75,80.83,91.83,
+],
+            [
+93.60,91.05,
+93.38,91.05,
+93.31,90.69,
+93.16,90.62,
+93.09,90.47,
+93.02,90.04,
+92.80,89.09,
+92.80,88.95,
+92.73,88.36,
+91.71,88.00,
+],
+            [
+92.67,
+92.17,
+92.00,
+91.33,
+91.33,
+91.08,
+90.83,
+90.58,
+90.17,
+88.92,
+]]
+          }, 
+          { type: "boxplot",
+          name:'TallyM',
+            label: seriesLabel,
+            data:[
+            [
+68.67,81.58,80.25,88.92,75.17,68.58,80.50,79.42,88.83,72.17,
+68.42,79.58,79.00,88.42,69.50,
+68.08,79.00,78.92,87.67,69.25,
+67.92,79.00,78.67,87.08,69.08,
+67.50,77.92,78.58,86.50,68.58,
+66.42,77.50,78.42,86.08,66.75,
+63.92,77.25,78.08,85.83,66.67,
+62.33,76.67,77.92,85.83,66.58,
+74.92,77.33,85.42,64.08],
+            [
+91.00,88.25,89.50,93.00,97.33,
+90.75,88.17,89.50,91.42,97.00,
+90.08,88.00,88.92,91.33,96.33,
+90.08,87.92,88.83,91.17,96.33,
+90.00,87.33,88.42,90.67,96.33,
+90.00,87.25,88.33,90.67,96.08,
+90.00,86.50,88.00,90.25,95.58,
+89.83,86.25,87.92,90.17,95.08,
+89.42,86.00,87.50,90.08,95.08,
+87.83,85.58,86.75,90.08,94.67],
+            [94.18,92.95,
+92.73,92.65,
+92.29,92.29,
+92.22,92.29,
+92.07,92.00,
+91.93,91.85,
+90.55,91.42,
+90.55,90.69,
+90.04,89.67,
+89.24,89.16],
+            [95.17,94.83,
+94.75,
+94.58,
+94.50,
+94.17,
+94.08,
+93.92,
+93.67,
+92.67]]
+          },
+          { type: "boxplot",
+          name:'TallyE',
+            label: seriesLabel,
+            data:[
+            [71.38,82.83,84.08,90.63,74.54,
+71.00,81.54,81.63,89.54,72.54,
+70.67,80.21,79.13,86.79,67.50],
+            [
+94.08,87.54,90.33,91.54,97.50,
+93.33,86.83,89.29,91.42,97.46,
+91.92,84.71,89.25,91.33,97.42,
+97.13,
+96.92,
+96.75,
+],
+            [
+94.54,97.33,
+93.25,97.08,
+92.10,95.63,
+],
+            [
+98.13,
+97.75,
+97.71,
+97.29,
+97.21,
+97.21,
+97.17,
+97.00,
+96.67,
+95.83,
+]]
+          }
+          ]
+      };
+      if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+      }
+    </script>
+  </body>
+</html>
